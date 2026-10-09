@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChatGPT Prompt Automator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <h1>✦ Prompt Automator</h1>
+  <p class="sub">9 prompts → 1 collage</p>
+
+  <div class="card">
+    <div class="row">
+      <b>Prompt Queue</b>
+      <label class="import">Import
+        <input id="fileInput" type="file" accept=".txt,.md">
+      </label>
+    </div>
+    <textarea id="prompts" placeholder="One image prompt per line..."></textarea>
+    <div class="meta"><span id="total">0</span> prompts</div>
+  </div>
+
+  <div class="stats">
+    <div><small>Progress</small><b id="counter">0 / 0</b></div>
+    <div><small>Images</small><b id="images">0</b></div>
+    <div><small>Batch</small><b id="batch">—</b></div>
+  </div>
+
+  <div class="card">
+    <div id="status">Ready</div>
+    <div class="track"><div id="progress"></div></div>
+  </div>
+
+  <div class="buttons">
+    <button id="start">▶ Start</button>
+    <button id="pause">Ⅱ Pause</button>
+    <button id="stop">■ Stop</button>
+  </div>
+
+  <p class="foot">Automatic queue • NEW images only</p>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
